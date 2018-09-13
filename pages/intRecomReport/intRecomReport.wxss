@@ -1,0 +1,141 @@
+/* pages/intRecomReport/intRecomReport.wxss */
+@import '../../template/tem.wxss';
+
+.report-user {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.report-user-box {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.report-user-left {
+  display: flex;
+}
+
+.report-user-image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.report-user-image image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.report-user-text {
+  margin-left: 10px;
+}
+
+.report-user-text_1 {
+  color: #333;
+  font-size: 16px;
+}
+
+.report-user-text_2 {
+  color: #999;
+  font-size: 14px;
+}
+
+.report-user-right {
+  display: flex;
+  margin-top: 12rpx;
+  border: 1px solid #5b93f3;
+  border-radius: 5px;
+  padding: 5px 10px 0px 10px;
+  height: 28px;
+}
+
+.report-user-right-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+}
+
+.report-user-right-image image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.report-user-right-text {
+  color: #5b93f3;
+  font-size: 16px;
+  height: 20px;
+}
+
+.report {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.report-box {
+  width: 85%;
+  margin: 0 auto;
+  background-color: #edf4fd;
+  border-radius: 5px;
+  padding: 20px 10px 5px 15px;
+}
+
+.report-title {
+  color: #5a94f3;
+  font-size: 18px;
+}
+
+.report-detil {
+  margin-top: 20px;
+}
+
+.report-detil-content {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.report-detil-point {
+  width: 8px;
+  height: 8px;
+  background-color: #5a94f2;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+.report-detil-text {
+  font-size: 14px;
+  color: #666;
+  width: 90%;
+}
+
+.report-int {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.report-int-box {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.report-int-title {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #666;
+  padding-bottom: 20px;
+}
+
+.report-int-line {
+  width: 100%;
+  height: 1px;
+  background-color: #dddedb;
+}
+
+button[plain] {
+  border: 0;
+}

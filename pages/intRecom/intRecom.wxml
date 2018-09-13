@@ -1,0 +1,55 @@
+<import src='../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+
+
+<view class='shade' wx:if='{{ shade }}'>
+  <template is='userInfoTemplate' data='{{ ...multiArrayObj }}'></template>
+</view>
+
+<view class='intRecom-line'></view>
+
+<view wx:if='{{ startPart }}'>
+  <view class="click-image">
+    <image src='../../image/intRecom.jpg' class='banner'></image>
+  </view>
+  <view class='button'>
+    <button class='btn' bindtap='fnGoInput'>点击填写</button>
+  </view>
+  <view class='btn-buttom'>
+    点击填写问卷调查
+  </view>
+</view>
+
+<view wx:if="{{recomed}}">
+  <view class="recomed-imgae">
+    <image class="first-image" src="../../image/inrRecomBgc.jpg"></image>
+  </view>
+
+  <view class="recom-box" wx:if="{{recomedQues}}">
+    <text class="labe">帮助我们了解您</text>
+    <view>
+      <view class="title-top">
+        <text class="labe-title">{{ pageNum }}、{{ list.question }}</text>
+      </view>
+      <block wx:for='{{ list.answer }}' wx:for-item="answerName" wx:for-index="idx">
+        <view class="choose {{ answerName.selectFlag? 'choose-select':'' }}" bindtap='fnClick' data-pageNum='{{ pageNum }}' data-id='{{ idx }}'>
+          <text>{{ answerName.content }}</text>
+        </view>
+      </block>
+    </view>
+    <view class="last">{{ pageNum }} / {{ listLength }}</view>
+  </view>
+  <view class="recom-box"  wx:elif="{{recomedEnd}}">
+    <view class='apprec-image'>
+      <image src='../../image/tpt.jpg'></image>
+    </view>
+    <view class="apprec-top">
+      <view>感谢您参与回答</view>
+      <view>我们的问题</view>
+    </view>
+
+    <button class="end-btn" bindtap='fnClickAns'>提交答案</button>
+    <view class='restart' bindtap='fnRestart'>重新填写</view>
+  </view>
+</view>

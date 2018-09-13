@@ -1,0 +1,9 @@
+/* pages/mine/evaluate/evaluate.wxss */
+@import '../../../template/tem.wxss';
+page {
+  background-color: #f6f7fb;
+}
+.eval-mine{
+  width: 100%;
+  height: 1px;
+}

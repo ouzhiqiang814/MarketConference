@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/signed/signed",
+    "pages/aboutUs/aboutUs",
+    "pages/intRecom/intRecom",
+    "pages/intRecomReport/intRecomReport",
+    "pages/intPredic/intPredic",
+    "pages/intComy/intComy",
+    "pages/intMark/intMark",
+    "pages/meetingReport/meetingReport",
+    "pages/product/major/major",
+    "pages/product/detil/detil",
+    "pages/product/case/case",
+    "pages/product/consult/consult",
+    "pages/product/evaluate/evaluate",
+    "pages/product/order/order",
+    "pages/product/reply/reply",
+    "pages/mine/evaluate/evaluate",
+    "pages/mine/browse/browse",
+    "pages/mine/collection/collection",
+    "pages/mine/order/order"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#587BFD",
+    "navigationBarTitleText": "天阳科技有限公司",
+    "navigationBarTextStyle": "light",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "selectedColor": "#5688FB",
+    "backgroundColor":"#fff",
+    "borderStyle":"white",
+    "list": [
+      {
+        "pagePath": "pages/intRecom/intRecom",
+        "text": "智能推荐",
+        "iconPath": "image/intPre.png",
+        "selectedIconPath": "image/intPre_HL.png"
+      },
+      {
+        "pagePath": "pages/intPredic/intPredic",
+        "text": "智能预测",
+        "iconPath": "image/intRec.png",
+        "selectedIconPath": "image/intRec_HL.png"
+      },
+      {
+        "pagePath": "pages/aboutUs/aboutUs",
+        "text": "关于我们",
+        "iconPath": "image/aboutUs.png",
+        "selectedIconPath": "image/aboutUs_HL.png"
+      }
+    ]
+  }
+}

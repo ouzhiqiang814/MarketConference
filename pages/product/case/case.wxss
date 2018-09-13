@@ -1,0 +1,22 @@
+/* pages/product/case/case.wxss */
+.case-box{
+  padding-top: 20px;
+}
+.case-ph-title{
+  text-indent: 10px;
+  font-size: 16px;
+  color: #5e5e5e;
+}
+.case-ph-title:before{
+  content:'.';
+  background-color: #587BFD;
+  color: #587BFD;
+  margin-right: 8px;
+}
+.case-ph-text{
+  padding: 5px 20px;
+  text-indent: 2em;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #797979
+}

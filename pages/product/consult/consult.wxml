@@ -1,0 +1,97 @@
+<import src='../../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+<view class='consult-hd-box'>
+  <view class='consult-box'>
+    <view class='consult-box-inside'>
+      <view class='consult-hd-image'>
+        <image src='../../../image/tpt.jpg' class='box-image'></image>
+      </view>
+      <view class='consult-hd-text'>
+        <image src='../../../image/box-b.png' style='width:100%;height:80%;'></image>
+        <view style='margin-top:-40px;padding-left:15px;'>您好，天阳科技有限公司很高兴为您服务！</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='consult-phone'>
+  <view class='consult-phone-box'>
+    <view class='consult-phone-text'>
+      如果想要详细了解,欢迎电话咨询
+    </view>
+    <view class='consult-phone-line'></view>
+    <view class='consult-phone-image'>
+      <view class='consult-phone-image-box'>
+        <view class='consult-phone-imagebox'>
+          <image src='../../../image/call.png'></image>
+        </view>
+        <view class='consult-phone-right'>电话咨询</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='consult-content'>
+  <view class='consult-con_1'>
+    <view>您好！很高兴为您服务!</view>
+    <view>如您需要什么咨询了解,请描述您的问题!</view>
+    <view class='consult-con-line'></view>
+  </view>
+  <view class='consult-con_2'>
+    <view>您可能想问：</view>
+  </view>
+  <view class='consult-con_3'>
+    <view class='consult-qus' bindtap='fnGoAnsewr' data-id='123321'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+    <view class='consult-qus'>
+      我们的银行CRM有什么优势？
+    </view>
+  </view>
+</view>
+
+<view class='consult-margin'></view>
+
+<view class='consult-footer'>
+  <button class='user-box-btn' bindtap='fnGoConsultDel'>预约咨询</button>
+</view>

@@ -1,0 +1,67 @@
+<import src='../../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+
+<view class='shade' wx:if='{{ shade }}'>
+ <template is='userInfoTemplateInside' data='{{ ...multiArrayObj }}'></template>
+</view>
+
+<view class='detil-num-box'>
+  <view class='detil-num-text'>有 {{ num }} 人了解过该产品</view>
+</view>
+
+<view class='detil-box'>
+  <view class='detil-ph-title'>
+    <text>产品定位</text>
+  </view>
+  <view class='detil-ph-text'>
+    {{ pdSmy }}
+  </view>
+</view>
+
+<view class='detie-image' wx:if='{{ picDelFlag }}'>
+  <image src='{{ picDel[0].cfPdPicInfVOS }}'></image>
+</view>
+
+<view class='detil-box'>
+  <view class='detil-ph-title'>
+    <text>产品架构</text>
+  </view>
+  <view class='detil-ph-text'>
+    {{ pdDsc }}
+  </view>
+</view>
+
+<view class='detie-image' wx:if='{{ picDelFlag }}'>
+  <image src='{{ picDel[1].cfPdPicInfVOS }}'></image>
+</view>
+
+<view style='height:150rpx;width:100%;'></view>
+
+<view class='detil-footer'>
+  <view class='detil-footer-box'>
+    <view class='detil-footer-left'>
+      <view class='detil-left-btn' bindtap='fnConsult' data-url='../consult/consult'>
+        <view class='detil-left-image'>
+          <image src='../../../image/Consultation.png'></image>
+        </view>
+        <view class='detil-left-text'>咨询</view>
+      </view>
+      <view class='detil-left-btn' bindtap='fnCollection' >
+        <view class='detil-left-image'>
+          <image src='{{ collectionImage }}'></image>
+        </view>
+        <view class='detil-left-text'>收藏</view>
+      </view>
+      <view class='detil-left-btn' bindtap='fnEvaluate' data-url='../evaluate/evaluate'>
+        <view class='detil-left-image'>
+          <image src='../../../image/comment-1.png'></image>
+        </view>
+        <view class='detil-left-text'>评价</view>
+      </view>
+    </view>
+    <view class='detil-footer-right' bindtap='fnGoCase'>
+      <view>查看案例</view>
+    </view>
+  </view>
+</view>

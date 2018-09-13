@@ -1,0 +1,182 @@
+/**app.wxss**/
+
+/**app.wxss**/
+@import 'weui.wxss';
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.ns_iPhone {
+  width: 100%;
+  height: 64px;
+  text-align: center;
+  line-height: 82px;
+  color: white;
+  font-weight: normal;
+  font-size: 18px;
+  background: linear-gradient(to right, #587bfd, #5293f7);
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+
+.ns_iPhoneX {
+  width: 100%;
+  height: 88px;
+  text-align: center;
+  line-height: 130px;
+  color: white;
+  font-weight: normal;
+  font-size: 18px;
+  background: linear-gradient(to right, #587bfd, #5293f7);
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+
+.ns_android {
+  width: 100%;
+  height: 68px;
+  text-align: center;
+  line-height: 90px;
+  color: white;
+  font-weight: normal;
+  font-size: 18px;
+  background: linear-gradient(to right, #587bfd, #5293f7);
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+
+.nav-image_iPhone {
+  width: 58rpx;
+  height: 58rpx;
+  position: fixed;
+  top: 25px;
+  left: 20px;
+}
+
+.nav-image_iPhoneX {
+  width: 60rpx;
+  height: 60rpx;
+  position: fixed;
+  top: 49px;
+  left: 20px;
+}
+
+.nav-image_android {
+  width: 58rpx;
+  height: 58rpx;
+  position: fixed;
+  top: 26px;
+  left: 20px;
+}
+
+.user-box {
+  background-color: #fff;
+  width: 550rpx;
+  margin: 0 auto;
+  border-radius: 8rpx;
+  box-shadow: 0px 0px 2px 3px #e9e9ea;
+  position: fixed;
+  top: 360rpx;
+  left: 0;
+  right: 0;
+  padding: 20px 20px 15px 20px;
+}
+
+.user-box-title {
+  font-size: 17px;
+  font-weight: bold;
+  color: #666;
+  text-align: center;
+}
+
+.user-box-input {
+  margin-top: 15px;
+}
+
+.user-box-input-line {
+  height: 1px;
+  width: 100%;
+  background-color: #d7d7d7;
+}
+
+.user-box-input-top {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.user-box-input-img {
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+  margin-right: 20px;
+}
+
+.user-box-button {
+  margin-top: 30px;
+}
+
+.user-box-btn {
+  background-color: #5392f8;
+  color: #fff;
+}
+
+.user-weui-input {
+  font-size: 16px;
+  height: 2.58823529em;
+  min-height: 2.58823529em;
+  line-height: 2.58823529em;
+}
+
+.user-box-btn:active {
+  background-color: rgb(56, 132, 247);
+}
+
+.shade {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.shade > .user-box {
+  top: 250rpx;
+}
+
+.user-box-cancel-btn {
+  margin-top: 10px;
+}
+
+.user-box-cancel-text {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  color: #5c5c5c;
+}
+
+.none-data {
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+  position: fixed;
+  text-align: center;
+  padding-top: 30px;
+  color: #666;
+  font-size: 16px;
+}

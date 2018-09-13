@@ -1,0 +1,62 @@
+<import src='../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+
+<view class='report-user'>
+  <view class='report-user-box'>
+    <view class='report-user-left'>
+      <view class='report-user-image'>
+        <image src='{{ userImg }}'></image>
+      </view>
+      <view class='report-user-text'>
+        <view class='report-user-text_1'>
+          XXXXXXXXXX
+        </view>
+        <view class='report-user-text_2'>
+          2018-08-27 23:00
+        </view>
+      </view>
+    </view>
+    <view class='report-user-right' bindtap='fnSharePic'>
+      <view class='report-user-right-image'>
+        <image src='../../image/person_index.png'></image>
+      </view>
+      <view class='report-user-right-text'>分享报告</view>
+      <!-- <button open-type='share'  plain="true" bindtap='fnShare'>分享报告</button> -->
+    </view>
+  </view>
+</view>
+
+<view style="width:{{ canvasWidth+20 }}px;height:{{ canvasHeight+40 }}px;margin:10px auto;background-color:#ff0000;padding-top:10px;" >
+  <canvas canvas-id="shareCanvas" style="width:{{ canvasWidth }}px;height:{{ canvasHeight }}px;margin:0 auto;background-color:#fff" />
+</view>
+<!-- <view style="width:{{ canvasWidth+20 }}px;height:{{ canvasHeight+40 }}px;margin:10px auto;background-color:#ff0000;padding-top:10px;" >
+  <canvas canvas-id="shareCanvas_1" style="width:{{ canvasWidth }}px;height:{{ canvasHeight }}px;margin:0 auto;background-color:#fff" />
+</view> -->
+
+
+<view class='report'>
+  <view class='report-box'>
+    <view class='report-title'>您的调查情况：</view>
+    <view class='report-detil'>
+      <block wx:for='{{ reportDetil }}' wx:key='{{ index }}'  wx:for-item="itemName">
+        <view class='report-detil-content'>
+          <view class='report-detil-point'></view>
+          <view class='report-detil-text'>{{ itemName }}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class='report-int'>
+  <view class='report-int-box'>
+    <view class='report-int-title'>根据调查报告为您推荐 </view>
+    <view class='report-int-act'>
+      <block wx:for='{{items}}' wx:key='{{index}}'>
+        <view class='report-int-line'></view>
+        <template is='prodListTemplate' data='{{ ...item }}'></template>
+      </block>
+    </view>
+  </view>
+</view>

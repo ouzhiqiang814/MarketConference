@@ -1,0 +1,22 @@
+<import src='../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+<view>
+  <view class="">
+    <image src='../../image/banner.jpg' class='banner'></image>
+  </view>
+  <view class='mask'></view>
+  <view class='box'>
+    <view class='box-imgBox'>
+      <image src='../../image/ok_signed.png' class='box-image'></image>
+    </view>
+    <view class='title-box'>
+      <view class='title-top'>
+        <text>签到成功</text>
+      </view>
+      <view class='title-bottom'>
+        <text class='title-small'>{{second }}秒后自动跳转到首页</text>
+      </view>
+    </view>
+  </view>
+</view>

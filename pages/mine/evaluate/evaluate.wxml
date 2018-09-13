@@ -1,0 +1,10 @@
+<import src='../../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+<view class='eval-mine'></view>
+
+<block wx:for='{{  items  }}' wx:key='{{index}}'>
+  <template is='evalMineListTemplate' data='{{ ...item }}'></template>
+</block>
+
+	<template is='noneData' wx:if='{{ items.length == 0 }}'></template>

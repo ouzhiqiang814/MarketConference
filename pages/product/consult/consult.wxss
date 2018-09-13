@@ -1,0 +1,148 @@
+/* pages/product/consult/consult.wxss */
+@import '../../../template/tem.wxss';
+.consult-hd-box {
+  color: white;
+  width: 100%;
+  font-size: 13px;
+  background: linear-gradient(to right, #587bfd, #5293f7);
+  padding-bottom: 90rpx;
+}
+
+.consult-box {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.consult-box-inside{
+  margin: 0 auto;
+  display: flex;
+}
+
+.box-image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.consult-hd-text {
+  height: 80rpx;
+  line-height: 60rpx;
+  margin-left: 5px;
+  font-size: 12px;
+  
+}
+
+.consult-phone {
+  width: 100%;
+  margin-top: -60rpx;
+}
+
+.consult-phone-box {
+  width: 650rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px 2px #c9c9c9;
+  display: flex;
+  height: 85rpx;
+}
+
+.consult-phone-text {
+  font-size: 12px;
+  color: #c0c0c0;
+  width: 516rpx;
+  text-align: center;
+  line-height: 85rpx;
+}
+
+.consult-phone-image {
+  width: 230rpx;
+  line-height: 85rpx;
+}
+
+.consult-phone-image-box {
+  width: 180rpx;
+  margin: 0 auto;
+  display: flex;
+}
+
+.consult-phone-imagebox {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 3px;
+}
+
+.consult-phone-imagebox image {
+  width: 100%;
+  height: 100%;
+}
+
+.consult-phone-right {
+  font-size: 14px;
+  color: #5e5e5e;
+  line-height: 85rpx;
+}
+
+.consult-phone-line {
+  width: 1px;
+  height: 36rpx;
+  background-color: #ccc;
+  margin-top: 24.5rpx;
+}
+
+.consult-content {
+  margin-top: 15px;
+}
+
+.consult-con_1 {
+  font-size: 16px;
+  color: #6b6b6b;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.consult-con-line {
+  width: 100%;
+  height: 1px;
+  background-color: #e4e4e4;
+  margin-top: 20px;
+}
+
+.consult-con_2 {
+  margin-top: 30px;
+  font-size: 15px;
+  color: #bcbcbc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.consult-con_3 {
+  font-size: 15px;
+  color: #5a8ffd;
+  padding-left: 20px;
+  line-height: 2.5;
+  margin-bottom: 120rpx;
+}
+.consult-margin{
+  width: 100%;
+  height: 120px;
+}
+
+.user-box-btn {
+  background-color: #5392f8;
+  color: #fff;
+}
+
+
+.user-box-btn:active {
+  background-color: rgb(56, 132, 247);
+}
+.consult-footer{
+  position: fixed;
+  bottom: 0px;
+  width: 600rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}

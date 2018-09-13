@@ -1,0 +1,28 @@
+/* pages/mine/collection/collection.wxss */
+@import '../../../template/tem.wxss';
+page {
+  background-color: #f6f7fb;
+}
+.collection-mine{
+  width: 100%;
+  height: 1px;
+}
+.collection-hd{
+  width: 100%;
+}
+.collection-hd-box{
+  padding: 15px 15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.collection-hd-text{
+  font-size: 16px;
+  color: #666666
+}
+.collection-hd-btn{
+  color: #ffae00;
+  font-size: 12px;
+  padding: 5px 15px;
+  border-radius: 25px;
+  border: 1px solid #ffae00;
+}

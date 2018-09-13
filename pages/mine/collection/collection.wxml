@@ -1,0 +1,21 @@
+<import src='../../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+
+<view class='collection-hd'>
+  <view class='collection-hd-box'>
+    <view class='collection-hd-text'>共 {{ items.length }} 个产品</view>
+    <view class='collection-hd-btn' bindtap='fnGoDel'>{{ collectionText}}</view>
+  </view>
+</view>
+<view class='collection-mine'></view>
+
+<block wx:for='{{  items  }}' wx:key='{{index}}' wx:if='{{ flag }}'>
+  <template is='prodListTemplate' data='{{ ...item }}'></template>
+</block>
+
+<block wx:for='{{  items  }}' wx:key='{{index}}' wx:for-index='idx' wx:if='{{ !flag }}'>
+  <template is='prodDetilTemplate' data='{{ ...item }}' ></template>
+</block>
+
+<template is='noneData' wx:if='{{ items.length == 0 }}'></template>

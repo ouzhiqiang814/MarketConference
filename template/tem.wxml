@@ -1,0 +1,258 @@
+<template name='userInfoTemplate'>
+  <view class='user-box'>
+    <view class='user-box-title'>
+      <text>请您完善个人信息</text>
+    </view>
+    <!-- <view class="user-box-input">
+      <view class='user-box-input-top'>
+        <image src='../../image/person_index.png' class='user-box-input-img'></image>
+        <input class="user-weui-input" focus placeholder="请输入您的称呼" type='text' bindblur='fnNameEvent' />
+      </view>
+      <view class='user-box-input-line'></view>
+    </view> -->
+    <view class="user-box-input">
+      <view class='user-box-input-top'>
+        <image src='../../image/phone_index.png' class='user-box-input-img'></image>
+        <input class="user-weui-input" auto-focus placeholder="请输入您的手机号码" type='number' bindblur="fnPhoneNumEvent" />
+      </view>
+      <view class='user-box-input-line'></view>
+    </view>
+    <!-- <view class="user-box-input">
+      <view class='user-box-input-top'>
+        <image src='../../image/conpamy_index.png' class='user-box-input-img'></image>
+        <input class="user-weui-input" auto-focus placeholder="请输入您的公司名称" type='text' bindblur="fnCompanyEvent" />
+      </view>
+      <view class='user-box-input-line'></view>
+    </view> -->
+    <view class="user-box-input">
+      <view class='user-box-input-top'>
+        <image src='../../image/conpamy_index.png' class='user-box-input-img'></image>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <view class="picker">
+            <input class="user-weui-input" disabled='true' value='{{ multiValue }}' placeholder="请选择您的行业以及职位" type='text' bindblur="fnCompanyEvent" />
+
+          </view>
+        </picker>
+      </view>
+      <view class='user-box-input-line'></view>
+    </view>
+    <!-- <view class="user-box-input">
+      <view class='user-box-input-top'>
+        <image src='../../image/position_index.png' class='user-box-input-img'></image>
+        <input class="user-weui-input" auto-focus placeholder="请输入您的职位" type='text' bindblur="fnPositionEvent" />
+      </view>
+      <view class='user-box-input-line'></view>
+    </view> -->
+    <view class='user-box-button'>
+      <button class='user-box-btn' open-type="getUserInfo" bindgetuserinfo="userInfoHandler">确认</button>
+    </view>
+    <view class='user-box-cancel-btn'>
+      <view class='user-box-cancel-text' bindtap='fnCancelBtn'>跳过</view>
+    </view>
+  </view>
+</template>
+
+<template name='userInfoTemplateInside'>
+  <view class='user-box'>
+    <view class='user-box-title'>
+      <text>请您完善个人信息</text>
+    </view>
+    <!-- <view class="user-box-input">
+      <view class='user-box-input-top'>
+        <image src='../../../image/person_index.png' class='user-box-input-img'></image>
+        <input class="user-weui-input" focus placeholder="请输入您的称呼" type='text' bindblur='fnNameEvent' />
+      </view>
+      <view class='user-box-input-line'></view>
+    </view> -->
+    <view class="user-box-input">
+      <view class='user-box-input-top'>
+        <image src='../../../image/phone_index.png' class='user-box-input-img'></image>
+        <input class="user-weui-input" auto-focus placeholder="请输入您的手机号码" type='number' bindblur="fnPhoneNumEvent" />
+      </view>
+      <view class='user-box-input-line'></view>
+    </view>
+    <!-- <view class="user-box-input">
+      <view class='user-box-input-top'>
+        <image src='../../../image/conpamy_index.png' class='user-box-input-img'></image>
+        <input class="user-weui-input" auto-focus placeholder="请输入您的公司名称" type='text' bindblur="fnCompanyEvent" />
+      </view>
+      <view class='user-box-input-line'></view>
+    </view> -->
+    <view class="user-box-input">
+      <view class='user-box-input-top'>
+        <image src='../../../image/conpamy_index.png' class='user-box-input-img'></image>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <view class="picker">
+            <input class="user-weui-input" disabled='true' value='{{ multiValue }}' placeholder="请选择您的行业以及职位" type='text' bindblur="fnCompanyEvent" />
+
+          </view>
+        </picker>
+      </view>
+      <view class='user-box-input-line'></view>
+    </view>
+    <!-- <view class="user-box-input">
+      <view class='user-box-input-top'>
+        <image src='../../../image/position_index.png' class='user-box-input-img'></image>
+        <input class="user-weui-input" auto-focus placeholder="请输入您的职位" type='text' bindblur="fnPositionEvent" />
+      </view>
+      <view class='user-box-input-line'></view>
+    </view> -->
+    <view class='user-box-button'>
+      <button class='user-box-btn' open-type="getUserInfo" bindgetuserinfo="userInfoHandler">确认</button>
+    </view>
+    <view class='user-box-cancel-btn'>
+      <view class='user-box-cancel-text' bindtap='fnCancelBtn'>跳过</view>
+    </view>
+  </view>
+</template>
+
+<template name='topBarTemplate'>
+  <view class='ns_{{control}}'>
+    <image class="nav-image_{{control}}" src="{{ image }}" bindtap='{{fn}}'></image>
+    {{ barTitle }}
+  </view>
+  <view style='margin-top:{{ topNum }}px'></view>
+</template>
+
+<template name="prodListTemplate">
+  <view class='panel' bindtap='fnGoDetils' data-id='{{pdId}}' data-name='{{ pdNm }}'>
+    <view class='panel-box'>
+      <view class='panel-image'>
+        <image src='{{ picIcon }}'></image>
+      </view>
+      <view class='panel-text'>
+        <view class='panel-title'>{{ pdNm }}</view>
+        <view class='panel-con'>{{ pdSmy }}</view>
+      </view>
+      <view class='panel-right-box'>
+        <view class='panel-right'></view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="prodDetilTemplate">
+  <view class='panel-del' data-id='{{pdId}}' data-name='{{ pdNm }}'>
+    <view class='panel-box-del'>
+      <view class='panel-image'>
+        <image src='{{ src }}'></image>
+      </view>
+      <view class='panel-text'>
+        <view class='panel-title'>{{ pdNm }}</view>
+        <view class='panel-con'>{{ pdSmy }}</view>
+      </view>
+    </view>
+    <view class='panel-detil' bindtap='fnDel' data-id='{{pkId}}' data-idx='idx'>
+      <view class='panel-detil-box'>
+        <image src='/image/del.png'></image>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name='evalListTemplate'>
+  <view class='eval'>
+    <view class='eval-box'>
+      <view class='eval-box-line'></view>
+      <view class='eval-top'>
+        <view class='eval-top-left'>
+          <view class='eval-top-left-image'>
+            <image src='{{ src }}'></image>
+          </view>
+          <view class='eval-top-left-text'>
+            <view class='eval-top-left-text_1'>{{ phoneNum }}</view>
+            <view class='eval-top-left-text_2'>{{ time }}</view>
+          </view>
+        </view>
+        <view class='eval-top-right' wx:if='{{ terFlag }}'>
+          <view class='eval-top-right-btn_1' bindtap='fnTer' data-index='{{ index }}'>写追评</view>
+          <view class='eval-top-right-btn_2' bindtap='fnDel' data-pkid='{{ pkId }}'>删除评论</view>
+        </view>
+      </view>
+      <view class='view-mid'>
+        <view>{{ content }}</view>
+      </view>
+      <view class='eval-bot'>
+        <view class='eval-bot-box'>
+          <view>{{ reply }}</view>
+        </view>
+      </view>
+      <view class='eval-ter' wx:if='{{ addTerFlag }}'>
+        <view class='eval-ter-box'>
+          <textarea style='height:60px;' maxlength='-1' placeholder='请输入您的追评内容' bindblur="fnAddeEvent" />
+        </view>
+        <view class='eval-ter-btn'>
+          <view class='eval-ter-btn_1' bindtap='fnTerSub' data-index='{{ index }}'>提交</view>
+          <view class='eval-ter-btn_2' bindtap='fnTerEsc' data-index='{{ index }}'>取消</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name='evalMineListTemplate'>
+  <view class='eval'>
+    <view class='eval-box_mine'>
+      <view class='eval-top'>
+        <view class='eval-top-left'>
+          <view class='eval-top-left-image'>
+            <image src='{{ src }}'></image>
+          </view>
+          <view class='eval-top-left-text'>
+            <view class='eval-top-left-text_1'>{{ phoneNum }}</view>
+            <view class='eval-top-left-text_2'>{{ time }}</view>
+          </view>
+        </view>
+        <view class='eval-top-right'>
+          <view class='eval-top-right-btn_1' bindtap='fnTer' data-index='{{ index }}'>写追评</view>
+          <view class='eval-top-right-btn_2' bindtap='fnDel' data-pkid='{{ pkId }}' data-pdid='{{ pdId }}'>删除评论</view>
+        </view>
+      </view>
+      <view class='view-mid'>
+        <view>{{ content }}</view>
+      </view>
+      <view class='eval-bot-mine'>
+        <view class='eval-bot-box'>
+          <view>{{ reply }}</view>
+        </view>
+      </view>
+      <view class='eval-panel-box'>
+        <view class='eval-panel-image'>
+          <image src='{{ src_pro }}'></image>
+        </view>
+        <view class='eval-panel-text'>
+          <view class='eval-panel-title'>{{ pdNm }}</view>
+          <view class='eval-panel-con'>{{ pdSmy }}</view>
+        </view>
+      </view>
+      <view class='eval-ter' wx:if='{{ addTerFlag }}'>
+        <view class='eval-ter-box'>
+          <textarea style='height:60px;' maxlength='-1' placeholder='请输入您的追评内容' bindblur="fnAddeEvent" />
+        </view>
+        <view class='eval-ter-btn'>
+          <view class='eval-ter-btn_1' bindtap='fnTerSub' data-index='{{ index }}' data-pdid='{{ pdId }}'>提交</view>
+          <view class='eval-ter-btn_2' bindtap='fnTerEsc' data-index='{{ index }}'>取消</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name='consultListTemplate'>
+  <view class='consult-footer'>
+    <view class='consult-footer-box'>
+      <view class='consult-left'>
+        <input type='text' placeholder='{{ placeholder }}' bindblur='consultInputEvent' value='{{ consultInput }}'></input>
+      </view>
+      <view class='consult-right' bindtap='fnSubmit'>
+        <image src='/image/enter.png'></image>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name='noneData'>
+  <view class='none-data'>
+    暂无数据
+  </view>
+</template>

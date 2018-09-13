@@ -1,0 +1,64 @@
+<import src='../../../template/tem.wxml' />
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+
+<view class='eval-hd'>
+  <view class='eval-hd-box'>
+    <view class='eval-hd-left'>
+      <view class='eval-left-num'>{{ items.length }}</view>
+      <view class='eval-left-text'>
+        <view>评价</view>
+        <view>人数</view>
+      </view>
+    </view>
+    <view class='eval-hd-right'>
+      <view class='eval-hd-text'>
+        <view>总浏览人数</view>
+        <view class='eval-right-num'>{{ num }}</view>
+      </view>
+      <!-- <view class='eval-hd-text'>
+        <view>实时浏览人数</view>
+        <view class='eval-right-num'>35</view>
+      </view> -->
+      <view class='eval-hd-line'></view>
+      <view class='eval-hd-text'>
+        <view>收藏人数</view>
+        <view class='eval-right-num'>{{ clctNum }}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='eval-sel'>
+    <view class='eval-sel-box'>
+      <view class='eval-sel-btn eval-action'>全部</view>
+      <view class='eval-sel-btn'>最新</view>
+      <view class='eval-sel-btn'>最新最新最新</view>
+      <view class='eval-sel-btn'>最新最新</view>
+      <view class='eval-sel-btn'>最新最</view>
+      <view class='eval-sel-btn'>最新最新</view>
+      <view class='eval-sel-btn'>最新最新最新</view>
+      <view class='eval-sel-btn'>最新</view>
+      <view class='eval-sel-btn'>最新最新</view>
+      <view class='eval-sel-btn '>最新</view>
+      <view class='eval-sel-btn'>最新</view>
+    </view>
+</view> -->
+
+<block wx:for='{{  items  }}' wx:key='{{index}}'>
+  <template is='evalListTemplate' data='{{ ...item }}'></template>
+</block>
+<template is='noneData' wx:if='{{ items.length == 0 }}'></template>
+
+<view class='eval-margin'></view>
+
+<!-- <template is='consultListTemplate' data='{{...footCode}}' wx:if='{{ consultFlag }}'></template> -->
+<view class='consult-footer'>
+  <view class='consult-footer-box'>
+    <view class='consult-left'>
+      <input type='text' placeholder='请提出您的建议或评价' bindblur='consultInputEvent' value='{{ consultInput }}'></input>
+    </view>
+    <view class='consult-right' bindtap='fnSubmit'>
+      <image src='/image/enter.png'></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,59 @@
+/* pages/product/order/order.wxss */
+page{
+  background-color: #f5f8fa;
+}
+.order-tar{
+  width: 100%;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  background-color: #fff;
+}
+.order-tar textarea{
+  width: 700rpx;
+  margin: 0 auto;
+  font-size: 15px;
+}
+.order-tar view{
+  width: 700rpx;
+  text-align: right;
+  color: #cacaca;
+  font-size: 12px;
+}
+.order-inp{
+  background-color: #fff;
+  width: 100%;
+  border-top: 1px solid #dddedb
+}
+.order-inp-box{
+  width: 700rpx;
+  margin: 0 auto;
+  display:flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.order-inp-text{
+  color: #656565;
+  font-size: 16px;
+}
+.order-int{
+  width: 500rpx;
+}
+.order-int input{
+  text-align: right;
+  font-size: 16px;
+}
+.order-btn{
+  width: 680rpx;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.order-btn button {
+  background-color: #5392f8;
+  color: #fff;
+}
+
+
+.order-btn button:active {
+  background-color: rgb(56, 132, 247);
+}

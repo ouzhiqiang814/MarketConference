@@ -1,0 +1,43 @@
+<import src='../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+<view wx:if='{{ intPreBtn }}'>
+  <view class="predic-image">
+    <image src='../../image/banner.jpg' class='banner' bindtap='fnGoList'></image>
+  </view>
+  <view class='btn-buttom'>
+    点击开启智能预测
+  </view>
+</view>
+
+
+<view class='shade' wx:if='{{ shade }}'>
+  <template is='userInfoTemplate' data='{{ ...multiArrayObj }}'></template>
+</view>
+
+<view wx:if='{{ intPreList }}'>
+  <view class='intPre-bgc'></view>
+  <view class='intPre-content'>
+    <block wx:for='{{ items }}' wx:key='idx' wx:for-item='item'>
+      <view class='intPre-type'>
+        <text>{{ item.type }}</text>
+      </view>
+      <block wx:for='{{item.list}}' wx:key='index' wx:for-item='itemName'>
+        <view class='panel' bindtap='fnGoDetils' data-id='{{itemName.id}}' data-type='{{item.type}}'>
+          <view class='panel-box'>
+            <view class='panel-image'>
+              <image src='{{ itemName.src }}'></image>
+            </view>
+            <view class='panel-text'>
+              <view class='panel-title'>{{ itemName.title }}</view>
+              <view class='panel-con'>{{ itemName.text }}</view>
+            </view>
+            <view class='panel-right-box'>
+              <view class='panel-right'></view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>

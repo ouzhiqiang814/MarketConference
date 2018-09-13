@@ -1,0 +1,10 @@
+<import src='../../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+
+<view class='replay'>
+  我们的银行CRM有什么优势？
+</view>
+<view class='replay-class'>
+我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势
+</view>

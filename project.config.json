@@ -1,0 +1,160 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.5",
+	"appid": "wxfbdcaba082c3e91a",
+	"projectname": "MarketConference",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 17,
+			"list": [
+				{
+					"id": 0,
+					"name": "签到页面",
+					"pathName": "pages/signed/signed",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/aboutUs/aboutUs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "公司介绍",
+					"pathName": "pages/intComy/intComy",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "产品列表-主要产品",
+					"pathName": "pages/product/major/major",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "查看详情",
+					"pathName": "pages/product/detil/detil",
+					"query": "type=银行&type_kind=CRM&id=100000",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "相关案例",
+					"pathName": "pages/product/case/case",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "咨询",
+					"pathName": "pages/product/consult/consult",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "评价",
+					"pathName": "pages/product/evaluate/evaluate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的评价",
+					"pathName": "pages/mine/evaluate/evaluate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的浏览",
+					"pathName": "pages/mine/browse/browse",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "我的收藏",
+					"pathName": "pages/mine/collection/collection",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "智能预测",
+					"pathName": "pages/intPredic/intPredic",
+					"query": ""
+				},
+				{
+					"id": 12,
+					"name": "智能推荐",
+					"pathName": "pages/intRecom/intRecom",
+					"query": "",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "zzwrgq1-09BQ1oQ9aK_4RHW2y-qG5vSjqEVUR6gfOTQ@cr4dev",
+						"shareKey": "vTk045pPuMUIo9Lcdk4I0VCCdsE4lT7d21T6lBiLKJoi8R6RZfGiV7e96PC6FHPcUSyK7r4PTmMysuBkY3BMHg~~"
+					}
+				},
+				{
+					"id": 13,
+					"name": "预约",
+					"pathName": "pages/product/order/order",
+					"query": "id=100000",
+					"scene": "1001"
+				},
+				{
+					"id": 14,
+					"name": "智能预测报告",
+					"pathName": "pages/intRecomReport/intRecomReport",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": 15,
+					"name": "我的预约",
+					"pathName": "pages/mine/order/order",
+					"query": "id=100000",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "会议报告",
+					"pathName": "pages/meetingReport/meetingReport",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "查看回复",
+					"pathName": "pages/product/reply/reply",
+					"query": "",
+					"scene": "1001"
+				}
+			]
+		}
+	}
+}

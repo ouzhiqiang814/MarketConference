@@ -1,0 +1,5 @@
+/* pages/product/major/major.wxss */
+@import '../../../template/tem.wxss';
+page{
+  background-color: #F6F7FB;
+}

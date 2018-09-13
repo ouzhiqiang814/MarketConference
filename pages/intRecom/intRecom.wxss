@@ -1,0 +1,152 @@
+/* pages/intRecom/intRecom.wxss */
+
+.intRecom-line {
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+  margin-top: -1px;
+}
+
+.click-image {
+  width: 620rpx;
+  margin: 0 auto;
+  height: 680rpx
+}
+
+.banner {
+  height: 100%;
+  width: 100%;
+}
+
+.button {
+  margin-top: 10px;
+  margin-left: 130rpx;
+  margin-right: 130rpx;
+  border-radius: 12rpx;
+}
+
+.btn {
+  color: #fff;
+  background-color: #5393f7;
+}
+
+.btn:active {
+  background-color: #3884f7;
+}
+
+.recomed-imgae {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.recom-box {
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 180rpx;
+  background-color: #fff;
+  width: 590rpx;
+  z-index: 2;
+  height: 80%;
+}
+
+.labe {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  height: 15%;
+  line-height: 4.8;
+}
+
+.title-top {
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+
+.labe-title {
+  letter-spacing: 4rpx;
+  font-size: 14px;
+}
+
+.choose {
+  font-size: 14px;
+  padding: 0 20px;
+  height: 70rpx;
+  margin-top: 35rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  border-radius: 35rpx;
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+}
+
+.last {
+  text-align: center;
+  color: #8c8c8c;
+  font-size: 14px;
+  position: absolute;
+  bottom: 15px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.choose-select {
+  background-color: #609ffc;
+  color: #fff;
+}
+
+.apprec-image {
+  width: 50%;
+  height: 20%;
+  margin: 0 auto;
+  margin-top: 20%;
+}
+
+.apprec-image image {
+  width: 100%;
+  height: 100%;
+}
+
+.apprec-top {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20%;
+  text-align: center;
+}
+
+.end-btn {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40%;
+  background-color: #587efd;
+  color: #fff;
+}
+
+.end-btn:active {
+  background-color: #3d63df;
+}
+
+.restart {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5%;
+}
+
+.btn-buttom {
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 14px;
+  color: grey;
+}
+
+.first-image {
+  width: 100%;
+  height: 100%;
+}

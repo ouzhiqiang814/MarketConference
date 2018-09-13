@@ -1,0 +1,96 @@
+<import src='../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+<view>
+  <image src='../../image/banner.jpg' class='meet-image'></image>
+</view>
+
+<view class='meetingReport-content'>
+  <view class='meetingReport-box'>
+    <view class='meetingReport-box-top'>
+      -截至当前大会运营总数据-
+    </view>
+    <view class='meetingReport-mid'>
+      <view class='meetingReport-mid-left'>
+        <view class='meetingReport-mid-top-text'>
+          <view class='meetingReport-mid-top-text_1'> 16</view>
+          <view class='meetingReport-mid-top-text_2'> %</view>
+        </view>
+        <view class='meetingReport-mid-bot-text'> 商机触达率</view>
+      </view>
+      <view class='meetingReport-mid-mid'></view>
+      <view class='meetingReport-mid-left'>
+        <view class='meetingReport-mid-top-text'>
+          <view class='meetingReport-mid-top-text_1'> 12</view>
+          <view class='meetingReport-mid-top-text_2'> %</view>
+        </view>
+        <view class='meetingReport-mid-bot-text'>商机转化率</view>
+      </view>
+    </view>
+    <view class='meetingReport-bottom'>
+      <view class='meetingReport-fnbox'>
+        <image src='../../image/Databox.png'></image>
+        <view class='meetingReport-fnbox-top'>
+          <view class='meetingReport-fnbox-top_1'>90</view>
+          <view class='meetingReport-fnbox-top_2'>人</view>
+        </view>
+        <view class='meetingReport-fnbox-bot'>互动用户数</view>
+      </view>
+      <view class='meetingReport-fnbox'>
+        <image src='../../image/Databox.png'></image>
+        <view class='meetingReport-fnbox-top'>
+          <view class='meetingReport-fnbox-top_1'>90</view>
+          <view class='meetingReport-fnbox-top_2'>人</view>
+        </view>
+        <view class='meetingReport-fnbox-bot'>潜在用户数</view>
+      </view>
+      <view class='meetingReport-fnbox'>
+        <image src='../../image/Databox.png'></image>
+        <view class='meetingReport-fnbox-top'>
+          <view class='meetingReport-fnbox-top_1'>90</view>
+          <view class='meetingReport-fnbox-top_2'>人</view>
+        </view>
+        <view class='meetingReport-fnbox-bot'>评论用户数</view>
+      </view>
+      <view class='meetingReport-fnbox'>
+        <image src='../../image/Databox.png'></image>
+        <view class='meetingReport-fnbox-top'>
+          <view class='meetingReport-fnbox-top_1'>90</view>
+          <view class='meetingReport-fnbox-top_2'>人</view>
+        </view>
+        <view class='meetingReport-fnbox-bot'>预约用户数</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='meetingReport-content-bot'>
+  <view class='meetingReport-box'>
+    <view class='meetingReport-box-top'>
+      -点击数据-
+    </view>
+    <view class='meetingReport-image'>
+      <image src='../../image/banner.jpg'></image>
+    </view>
+    <view class='meetingReport-text'>
+      点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数
+    </view>
+  </view>
+</view>
+
+
+<view class='meetingReport-content-bot'>
+  <view class='meetingReport-box'>
+    <view class='meetingReport-box-top'>
+      -客群分析-
+    </view>
+    <view class='meetingReport-image'>
+      <image src='../../image/banner.jpg'></image>
+    </view>
+    <view class='meetingReport-text'>
+      点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据点击数据
+    </view>
+  </view>
+</view>
+
+<view class='meetingReport-span'> </view>

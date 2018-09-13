@@ -1,0 +1,69 @@
+<import src='../../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+<view style='position:fixed;top:{{ topBar.topNum}}px;width:100%;background-color:#fff;'>
+  <view class='consult-hd-box'>
+    <view class='consult-box'>
+      <view class='consult-box-inside'>
+        <view class='consult-hd-image'>
+          <image src='{{ srcImage }}' class='box-image'></image>
+        </view>
+        <view class='consult-hd-text'>
+          <image src='../../../image/box-b.png' style='width:100%;height:80%;'></image>
+          <view style='margin-top:-40px;padding-left:15px;'>您好，天阳科技有限公司很高兴为您服务！</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='consult-phone'>
+    <view class='consult-phone-box'>
+      <view class='consult-phone-text'>
+        如果想要详细了解,欢迎电话咨询
+      </view>
+      <view class='consult-phone-line'></view>
+      <view class='consult-phone-image'>
+        <view class='consult-phone-image-box'>
+          <view class='consult-phone-imagebox'>
+            <image src='../../../image/call.png'></image>
+          </view>
+          <view class='consult-phone-right'>电话咨询</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='consult-content'>
+    <view class='consult-con_1'>
+      <view>您好！很高兴为您服务!</view>
+      <view>如您需要什么咨询了解,请描述您的问题!</view>
+      <view class='consult-con-line'></view>
+    </view>
+  </view>
+</view>
+<view style='height:{{ topBar.topNum + 125}}px'></view>
+<template is='noneData' wx:if='{{ list.length == 0 }}'></template>
+<block wx:for='{{ list }}' wx:for-item='itemName' wx:key='idx'>
+  <view class='mOrder-por'>
+    <view class='mOrder-por-box'>
+      <view class='mOrder-por-con'>
+        <view class='mOrder-por-left'>产品名称</view>
+        <view class='mOrder-por-right'>{{ itemName.pdNm }}</view>
+      </view>
+      <view class='mOrder-por-con'>
+        <view class='mOrder-por-left'>联系方式</view>
+        <view class='mOrder-por-right'>{{ itemName.mblPh }}</view>
+      </view>
+      <view class='mOrder-por-con'>
+        <view class='mOrder-por-left'>预约内容</view>
+      </view>
+      <view class='mOrder-por-con'>
+        <view class='mOrder-por-textarea'>
+          {{ itemName.cnsltCntnt }}
+          <!-- <textarea disabled='true'>{{ itemName.cnsltCntnt }}</textarea> -->
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+<view class='mOrder-por-margin'></view>

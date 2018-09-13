@@ -1,0 +1,25 @@
+
+/* pages/intComy/intComy.wxss */
+image{
+  width: 100%;
+  height: 316rpx;
+}
+.box{
+  margin-top: 20px;
+  width: 100%;
+}
+.title{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #4C4C4C;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.con{
+  padding: 5px 20px;
+  text-indent: 2em;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #797979
+}

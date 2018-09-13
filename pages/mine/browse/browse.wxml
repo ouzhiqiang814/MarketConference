@@ -1,0 +1,11 @@
+<import src='../../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+
+<view class='browse-mine'></view>
+
+<block wx:for='{{  items  }}' wx:key='{{index}}'>
+  <template is='prodListTemplate' data='{{ ...item }}'></template>
+</block>
+
+<template is='noneData' wx:if='{{ items.length == 0 }}'></template>

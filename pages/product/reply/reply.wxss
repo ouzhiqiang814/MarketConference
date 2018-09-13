@@ -1,0 +1,27 @@
+/* pages/product/reply/reply.wxss */
+
+.replay {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #587bfd;
+  padding: 10px 20px;
+}
+
+.replay:before {
+  content: 'Q：';
+  color: #587bfd;
+}
+
+.replay-class {
+  width: 85%;
+  margin: 0 auto;
+  color: #4d4d4d;
+  font-size: 14px;
+  word-break: keep-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  padding-top: 0px;
+}

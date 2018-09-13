@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<import src='../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+
+<view>
+  <view class="">
+    <image src='../../image/banner.jpg' class='banner'></image>
+  </view>
+  <template is='userInfoTemplate' data='{{ ...multiArrayObj }}'></template>
+</view>

@@ -1,0 +1,12 @@
+<import src='../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+<view>
+  <image src='../../image/intMark.png'></image>
+</view>
+<view class='box'>
+  <view class='title'>十月市场大会</view>
+  <view class='con'>
+    十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会十月市场大会
+  </view>
+</view>

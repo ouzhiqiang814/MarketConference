@@ -1,0 +1,147 @@
+<import src='../../template/tem.wxml' />
+
+<template is='topBarTemplate' data='{{...topBar}}'></template>
+<view class='shade' wx:if='{{ shade }}'>
+  <template is='userInfoTemplate' data='{{ ...multiArrayObj }}'></template>
+</view>
+
+<view class='hd-box'>
+  <view class='box'>
+    <view class='boxInside'>
+      <image src='{{ topImage }}' class='box-image'></image>
+      <view class='box-title'>
+        <text>欢迎来到天阳科技有限公司</text>
+      </view>
+    </view>
+  </view>
+  <view class='btn-box'>
+    <view class='btn-inside' bindtap='fnGoMineEval' data-url='../mine/evaluate/evaluate'>
+      <view class='btn-img'>
+        <image src='../../image/comment.png' class=''></image>
+      </view>
+      <view class='btn-title'>我的评价</view>
+    </view>
+    <view class='btn-inside' bindtap='fnGoMineColl' data-url='../mine/collection/collection'>
+      <view class='btn-img'>
+        <image src='../../image/love.png' class=''></image>
+      </view>
+      <view class='btn-title'>我的收藏</view>
+    </view>
+    <view class='btn-inside' bindtap='fnGoMineBrow' data-url='../mine/browse/browse'>
+      <view class='btn-img'>
+        <image src='../../image/look.png' class=''></image>
+      </view>
+      <view class='btn-title'>最近浏览</view>
+    </view>
+    <view class='btn-inside' bindtap='fnGoMineOrder' data-url='../mine/order/order'>
+      <view class='btn-img'>
+        <image src='../../image/Consultation-1.png' class=''></image>
+      </view>
+      <view class='btn-title'>历史预约</view>
+    </view>
+  </view>
+</view>
+
+<view class='product-box'>
+  <view class='product-title'>
+    <text>产品介绍</text>
+  </view>
+  <view class='product-btn'>
+    <scroll-view scroll-x class='product-btn-box'>
+      <block wx:for='{{ proList }}' wx:for-item="itemName" wx:key='index'>
+        <view class='product-btn-inside' bindtap='fnGoProList' data-type='{{ itemName.pdLnNm}}' data-id='{{ itemName.pdLnId }}'>
+          <view class='product-btn-img'>
+            <image src='../../image/position_index.png' class=''></image>
+          </view>
+          <view class='product-btn-title'>{{ itemName.pdLnNm}}</view>
+        </view>
+      </block>
+
+      <!-- <view class='product-btn-inside' bindtap='fnGoProList' data-type='CRM'  >
+        <view class='product-btn-img'>
+          <image src='../../image/position_index.png' class=''></image>
+        </view>
+        <view class='product-btn-title'>CRM</view>
+      </view>
+      <view class='product-btn-inside' bindtap='fnGoProList' data-type='CRM'  >
+        <view class='product-btn-img'>
+          <image src='../../image/position_index.png' class=''></image>
+        </view>
+        <view class='product-btn-title'>CRM</view>
+      </view>
+      <view class='product-btn-inside' bindtap='fnGoProList' data-type='CRM'  >
+        <view class='product-btn-img'>
+          <image src='../../image/position_index.png' class=''></image>
+        </view>
+        <view class='product-btn-title'>CRM</view>
+      </view>
+      <view class='product-btn-inside' bindtap='fnGoProList' data-type='CRM'  >
+        <view class='product-btn-img'>
+          <image src='../../image/position_index.png' class=''></image>
+        </view>
+        <view class='product-btn-title'>CRM</view>
+      </view>
+      <view class='product-btn-inside' bindtap='fnGoProList' data-type='CRM'  >
+        <view class='product-btn-img'>
+          <image src='../../image/position_index.png' class=''></image>
+        </view>
+        <view class='product-btn-title'>CRM</view>
+      </view> -->
+
+    </scroll-view>
+
+    <!-- <view class='product-btn-box'>
+      <view class='product-btn-inside' bindtap='fnGoProList' data-type='CRM'>
+        <view class='product-btn-img'>
+          <image src='../../image/position_index.png' class=''></image>
+        </view>
+        <view class='product-btn-title'>CRM</view>
+      </view>
+      <view class='product-btn-inside' bindtap='fnGoProList' data-type='大数据营销'>
+        <view class='product-btn-img'>
+          <image src='../../image/position_index.png' class=''></image>
+        </view>
+        <view class='product-btn-title'>大数据营销</view>
+      </view>
+      <view class='product-btn-inside' bindtap='fnGoProList' data-type='数据信征'>
+        <view class='product-btn-img'>
+          <image src='../../image/position_index.png' class=''></image>
+        </view>
+        <view class='product-btn-title'>数据信征</view>
+      </view>
+      <view class='product-btn-inside' bindtap='fnGoProList' data-type='数据平台'>
+        <view class='product-btn-img'>
+          <image src='../../image/position_index.png' class=''></image>
+        </view>
+        <view class='product-btn-title'>数据平台</view>
+      </view>
+    </view> -->
+  </view>
+</view>
+
+<view class='company-box' bindtap='fnGoIntCom'>
+  <view class='product-title'>
+    <text>公司介绍</text>
+  </view>
+  <view class='btn-right-box'>
+    <view class='btn-right'></view>
+  </view>
+</view>
+
+<view class='company-box' bindtap='fnGoIntMark'>
+  <view class='product-title'>
+    <text>本次大会介绍</text>
+  </view>
+  <view class='btn-right-box'>
+    <view class='btn-right'></view>
+  </view>
+</view>
+
+<view class='company-box' bindtap='fnGoMeetingReport'>
+  <view class='product-title'>
+    <text>会议报告</text>
+  </view>
+  <view class='btn-right-box'>
+    <view class='btn-right'></view>
+  </view>
+</view>
