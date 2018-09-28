@@ -1,11 +1,16 @@
 <import src='../../../template/tem.wxml' />
 
 <template is='topBarTemplate' data='{{...topBar}}'></template>
-<view class='case-box'>
-  <view class='case-ph-title'>
-    <text>产品定位</text>
+
+<template is='noneData' wx:if='{{ list.length == 0 }}'></template>
+
+<block wx:for='{{list}}' wx:key='{{index}}'  wx:for-item="itemName">
+  <view class='case-box'>
+    <view class='case-ph-title'>
+      <text>{{ itemName.caseNm }}</text>
+    </view>
+    <view class='case-ph-text'>
+      {{ itemName.caseDsc }}
+    </view>
   </view>
-  <view class='case-ph-text'>
-    产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位产品定位
-  </view>
-</view>
+</block>

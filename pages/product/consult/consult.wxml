@@ -5,11 +5,10 @@
   <view class='consult-box'>
     <view class='consult-box-inside'>
       <view class='consult-hd-image'>
-        <image src='../../../image/tpt.jpg' class='box-image'></image>
+        <image src='../../../image/tcp.png' class='box-image'></image>
       </view>
-      <view class='consult-hd-text'>
-        <image src='../../../image/box-b.png' style='width:100%;height:80%;'></image>
-        <view style='margin-top:-40px;padding-left:15px;'>您好，天阳科技有限公司很高兴为您服务！</view>
+      <view class='consult-hd-text' style='background-image:url("../../../image/box-b.png"); background-size:100% 80%;background-repeat:no-repeat;'>
+        <view style='padding-left:15px;'>您好，天阳科技有限公司很高兴为您服务！</view>
       </view>
     </view>
   </view>
@@ -42,51 +41,11 @@
     <view>您可能想问：</view>
   </view>
   <view class='consult-con_3'>
-    <view class='consult-qus' bindtap='fnGoAnsewr' data-id='123321'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
-    <view class='consult-qus'>
-      我们的银行CRM有什么优势？
-    </view>
+    <block wx:for='{{ arrList }}' wx:for-item="itemName">
+      <view class='consult-qus' bindtap='fnGoAnsewr' data-id='{{ itemName.num }}'>
+        {{ itemName.pdQuestion }}
+      </view>
+    </block>
   </view>
 </view>
 

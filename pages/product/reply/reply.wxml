@@ -3,8 +3,10 @@
 <template is='topBarTemplate' data='{{...topBar}}'></template>
 
 <view class='replay'>
-  我们的银行CRM有什么优势？
+  {{ replay }}
 </view>
-<view class='replay-class'>
-我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势我们的银行CRM有优势
-</view>
+<block wx:for='{{ arr }}' wx:for-item="itemName">
+  <view class='replay-class'>
+    {{ itemName }}
+  </view>
+</block>

@@ -17,19 +17,19 @@
         </view>
       </view>
     </view>
-    <view class='report-user-right' bindtap='fnSharePic'>
+    <!-- <view class='report-user-right' bindtap='fnSharePic'>
       <view class='report-user-right-image'>
         <image src='../../image/person_index.png'></image>
       </view>
       <view class='report-user-right-text'>分享报告</view>
-      <!-- <button open-type='share'  plain="true" bindtap='fnShare'>分享报告</button> -->
-    </view>
+      <button open-type='share'  plain="true" bindtap='fnShare'>分享报告</button>
+    </view> -->
   </view>
 </view>
 
-<view style="width:{{ canvasWidth+20 }}px;height:{{ canvasHeight+40 }}px;margin:10px auto;background-color:#ff0000;padding-top:10px;" >
+<!-- <view style="width:{{ canvasWidth+20 }}px;height:{{ canvasHeight+40 }}px;margin:10px auto;background-color:#ff0000;padding-top:10px;" >
   <canvas canvas-id="shareCanvas" style="width:{{ canvasWidth }}px;height:{{ canvasHeight }}px;margin:0 auto;background-color:#fff" />
-</view>
+</view> -->
 <!-- <view style="width:{{ canvasWidth+20 }}px;height:{{ canvasHeight+40 }}px;margin:10px auto;background-color:#ff0000;padding-top:10px;" >
   <canvas canvas-id="shareCanvas_1" style="width:{{ canvasWidth }}px;height:{{ canvasHeight }}px;margin:0 auto;background-color:#fff" />
 </view> -->

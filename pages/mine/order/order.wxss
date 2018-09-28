@@ -12,6 +12,10 @@ page {
   padding-bottom: 90rpx;
 }
 
+.consult-hd-image {
+  margin-left: -25rpx;
+}
+
 .consult-box {
   width: 100%;
   margin: 0 auto;
@@ -31,7 +35,7 @@ page {
 
 .consult-hd-text {
   height: 80rpx;
-  line-height: 60rpx;
+  line-height: 63rpx;
   margin-left: 5px;
   font-size: 12px;
 }
@@ -54,14 +58,19 @@ page {
 .consult-phone-text {
   font-size: 12px;
   color: #c0c0c0;
-  width: 516rpx;
-  text-align: center;
+  /* width: 470rpx; */
+  text-align: left;
   line-height: 85rpx;
+  padding-left: 30rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  padding-right: 10rpx;
 }
 
 .consult-phone-image {
   width: 230rpx;
   line-height: 85rpx;
+  margin-left: 20rpx;
 }
 
 .consult-phone-image-box {
@@ -92,6 +101,7 @@ page {
   height: 36rpx;
   background-color: #ccc;
   margin-top: 24.5rpx;
+  margin-left: 30rpx;
 }
 
 .consult-content {
@@ -178,7 +188,8 @@ page {
   max-height: 80px;
   overflow: scroll;
 }
-.mOrder-por-margin{
+
+.mOrder-por-margin {
   height: 60px;
   width: 100%;
 }

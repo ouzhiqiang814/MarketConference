@@ -15,14 +15,15 @@ Page({
     companyName: '',
     shade:false,
     navigateToUrl:'',
-    topImage:'../../image/tpt.jpg',
+    topImage:'../../image/tcp.png',
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     proList:null,
     multiArrayObj: common.fnIndustryPosition(),
     multiValue: {
       industry: '',
       position: ''
-    }
+    },
+    imageArr:['1.png','2.png','3.png','4.png']
   },
   onLoad: function () {
     var that = this;
@@ -48,8 +49,26 @@ Page({
     wx.hideLoading()
     if (res.data.status == '200') {
       console.log(res)
+      let proListArr = [];
+      for (let i = 0, len = res.data.data.length;i<len;i++){
+        proListArr.push({
+          crtEmpId: res.data.data[i].crtEmpId,
+          crtInsId: res.data.data[i].crtInsId,
+          crtTm: res.data.data[i].crtTm,
+          lastUdtDtTm: res.data.data[i].lastUdtDtTm,
+          lastUdtEmpId: res.data.data[i].lastUdtEmpId,
+          lastUdtInsId: res.data.data[i].lastUdtInsId,
+          pdLnDsc: res.data.data[i].pdLnDsc,
+          pdLnId: res.data.data[i].pdLnId,
+          pdLnNm: res.data.data[i].pdLnNm,
+          image:''
+        })
+      }
+      for (let i = 0; i < 4; i++) {
+        proListArr[i].image = '../../image/' + this.data.imageArr[i]
+      }
       this.setData({
-        proList: res.data.data
+        proList: proListArr
       })
 
     }
@@ -102,8 +121,9 @@ Page({
   fnPhoneNumEvent: common.fnPhoneNumEvent,
   fnCompanyEvent: common.fnCompanyEvent,
   userInfoHandler: function (e) {
+    var url = app.globalData.ip + '/am/marketconference/wxapi/cfCstMgr/createCFCstBscInf';
     var that = this;
-    common.userInfoHandler(e, that, true)
+    common.userInfoHandler(e, that, true, url)
   },
   //跳过填写信息
   fnCancelBtn: function () {

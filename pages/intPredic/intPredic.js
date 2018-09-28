@@ -20,6 +20,9 @@ Page({
     shade: true,
     intPreList: false,
     intPreBtn: true,
+    inRecFlag_1: 'inRec-hide',
+    inRecFlag_2: 'inRec-hide',
+    inRecFlag_3: 'inRec-hide',
     items: [{
       type: '操作组商品',
       list: [{
@@ -129,12 +132,37 @@ Page({
         shade: true
       })
     }
+    var that = this
+    var opacity_1 = 0;
+    var opacity_2 = 0;
+    var opacity_3 = 0;
+    setTimeout(function() {
+      that.setData({
+        inRecFlag_1: 'inRecFlag_1'
+      })
+      setTimeout(function() {
+        that.setData({
+          inRecFlag_2: 'inRecFlag_1'
+        })
+        setTimeout(function() {
+          that.setData({
+            inRecFlag_3: 'inRecFlag_1'
+          })
+
+        }, 1000)
+      }, 1000)
+    }, 1000);
+
+
   },
   onHide: function() {
     var userDel = wx.getStorageSync("userDel");
     if (!userDel) {
       this.setData({
-        shade: true
+        shade: true,
+        inRecFlag_1: 'opacity:0',
+        inRecFlag_2: 'opacity:0',
+        inRecFlag_3: 'opacity:0'
       })
     }
   },
@@ -183,7 +211,7 @@ Page({
   },
 
   // 返回预测界面
-  fnGoback:function(){
+  fnGoback: function() {
     var control = wx.getStorageSync("control");
     console.log(control)
     var topNum = 0;
@@ -206,7 +234,7 @@ Page({
       intPreBtn: true
     })
   },
-  fnGoDetils: function (e) {
+  fnGoDetils: function(e) {
     console.log('查看详情')
     console.log(e)
     var type_kind = e.currentTarget.dataset.id;
@@ -216,7 +244,7 @@ Page({
     })
   },
   // 行业以及职位选择
-  bindMultiPickerChange: function (e) {
+  bindMultiPickerChange: function(e) {
     var that = this;
     this.setData({
       multiValue: {
@@ -225,7 +253,7 @@ Page({
       }
     })
   },
-  bindMultiPickerColumnChange: function (e) {
+  bindMultiPickerColumnChange: function(e) {
     var that = this;
     common.bindMultiPickerColumnChange(e, that)
   }

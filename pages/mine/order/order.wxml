@@ -8,9 +8,8 @@
         <view class='consult-hd-image'>
           <image src='{{ srcImage }}' class='box-image'></image>
         </view>
-        <view class='consult-hd-text'>
-          <image src='../../../image/box-b.png' style='width:100%;height:80%;'></image>
-          <view style='margin-top:-40px;padding-left:15px;'>您好，天阳科技有限公司很高兴为您服务！</view>
+        <view class='consult-hd-text' style='background-image:url("../../../image/box-b.png"); background-size:100% 80%;background-repeat:no-repeat;'>
+          <view style='padding-left:15px;'>您好，天阳科技有限公司很高兴为您服务！</view>
         </view>
       </view>
     </view>
@@ -52,7 +51,7 @@
       </view>
       <view class='mOrder-por-con'>
         <view class='mOrder-por-left'>联系方式</view>
-        <view class='mOrder-por-right'>{{ itemName.mblPh }}</view>
+        <view class='mOrder-por-right'>{{ itemName.cstId }}</view>
       </view>
       <view class='mOrder-por-con'>
         <view class='mOrder-por-left'>预约内容</view>

@@ -1,13 +1,20 @@
 <import src='../../template/tem.wxml' />
 
 <template is='topBarTemplate' data='{{...topBar}}'></template>
-<view wx:if='{{ intPreBtn }}'>
-  <view class="predic-image">
-    <image src='../../image/banner.jpg' class='banner' bindtap='fnGoList'></image>
+<view wx:if='{{ intPreBtn }}' class='lanren-box'>
+  <view class="lanren">
+    <image src="../../image/inRec.png" class='img1'></image>
+    <image src="../../image/inRec_1.png" class='img2 {{ inRecFlag_1 }}' ></image>
+    <image src="../../image/inRec_2.png" class='img3 {{ inRecFlag_2 }}'></image>
+    <image src="../../image/inRec_3.png" class='img4 {{ inRecFlag_3 }}' ></image>
   </view>
-  <view class='btn-buttom'>
-    点击开启智能预测
+  <view class='lanren-text'>
+    点击预测
   </view>
+</view>
+
+<view class='btn-buttom'>
+  点击开启智能预测
 </view>
 
 

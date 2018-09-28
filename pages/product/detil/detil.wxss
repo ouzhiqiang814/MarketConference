@@ -1,95 +1,113 @@
 /* pages/product/detil/detil.wxss */
-page{
-  background-color: #F6F7FB;
+
+page {
+  background-color: #f6f7fb;
 }
-.detil-num-box{
+
+.detil-num-box {
   width: 100%;
   padding-top: 20px;
   margin-bottom: 20px;
 }
-.detil-num-text{
+
+.detil-num-text {
   width: 700rpx;
   margin: 0 auto;
   font-size: 14px;
   line-height: 1.7;
-  color: #FADB9C;
+  color: #fadb9c;
   text-indent: 2em;
   border-radius: 3px;
-  border: 1px solid #FADB9C;
-  background-color: rgba(250,219,156,0.1)
+  border: 1px solid #fadb9c;
+  background-color: rgba(250, 219, 156, 0.1);
 }
-.detil-box{
+
+.detil-box {
   width: 100%;
   margin-bottom: 20px;
 }
 
-.detil-ph-title{
+.detil-ph-title {
   text-indent: 10px;
   font-size: 16px;
   color: #737372;
 }
-.detil-ph-title:before{
-  content:'.';
-  background-color: #587BFD;
-  color: #587BFD;
+
+.detil-ph-title:before {
+  content: '.';
+  background-color: #587bfd;
+  color: #587bfd;
   margin-right: 8px;
 }
-.detil-ph-text{
+
+.detil-ph-text {
   padding: 5px 20px;
   text-indent: 2em;
   font-size: 15px;
   line-height: 1.8;
-  color: #797979
+  color: #797979;
+  text-align: justify;
+  text-justify: distribute;
 }
-.detie-image{
+
+.detie-image {
   height: 280rpx;
   padding: 20rpx 40rpx;
   margin-bottom: 20px;
 }
-.detie-image image{
+
+.detie-image image {
   width: 100%;
   height: 100%;
 }
-.detil-footer{
+
+.detil-footer {
   position: fixed;
-  bottom:0;
+  bottom: 0;
   width: 100%;
   height: 92rpx;
   background-color: #fff;
 }
-.detil-footer-box{
+
+.detil-footer-box {
   display: flex;
 }
-.detil-footer-left{
+
+.detil-footer-left {
   width: 444rpx;
-  display:flex;
+  display: flex;
   justify-content: space-around;
   padding: 0 15px;
 }
-.detil-footer-right{
+
+.detil-footer-right {
   width: 306rpx;
-  background:linear-gradient(to right, #588bfc, #609ffc);
+  background: linear-gradient(to right, #588bfc, #609ffc);
   color: #fff;
   text-align: center;
   font-size: 16px;
   padding-top: 25rpx;
 }
-.detil-left-btn{
+
+.detil-left-btn {
   width: 100rpx;
   height: 100%;
 }
-.detil-left-image{
+
+.detil-left-image {
   width: 100%;
   height: 48rpx;
   padding-top: 5px;
 }
-.detil-left-image image{
+
+.detil-left-image image {
   height: 100%;
   width: 50%;
   margin: 0 auto;
   display: block;
 }
-.detil-left-text{
+
+.detil-left-text {
   color: #797979;
   font-size: 14px;
   text-align: center;

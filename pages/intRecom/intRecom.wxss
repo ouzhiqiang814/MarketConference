@@ -10,7 +10,7 @@
 .click-image {
   width: 620rpx;
   margin: 0 auto;
-  height: 680rpx
+  height: 680rpx;
 }
 
 .banner {
@@ -45,7 +45,7 @@
   margin: 0 auto;
   left: 0;
   right: 0;
-  top: 180rpx;
+  top: 200rpx;
   background-color: #fff;
   width: 590rpx;
   z-index: 2;
@@ -65,6 +65,7 @@
 .title-top {
   margin-left: 40rpx;
   margin-right: 40rpx;
+  font-size: 14px;
 }
 
 .labe-title {
@@ -74,12 +75,12 @@
 
 .choose {
   font-size: 14px;
-  padding: 0 20px;
+  padding: 8px 15px;
   height: 70rpx;
-  margin-top: 35rpx;
+  margin-top: 30rpx;
   margin-left: 40rpx;
   margin-right: 40rpx;
-  border-radius: 35rpx;
+  border-radius: 15rpx;
   display: flex;
   align-items: center;
   background-color: #eee;
@@ -149,4 +150,19 @@
 .first-image {
   width: 100%;
   height: 100%;
+}
+
+.last-button {
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #587bfd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  padding: 3px 3px;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
 }

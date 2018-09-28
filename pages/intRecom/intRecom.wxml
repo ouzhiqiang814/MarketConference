@@ -29,16 +29,16 @@
   <view class="recom-box" wx:if="{{recomedQues}}">
     <text class="labe">帮助我们了解您</text>
     <view>
-      <view class="title-top">
-        <text class="labe-title">{{ pageNum }}、{{ list.question }}</text>
+      <view class="title-top">{{ pageNum }}、{{ listArr.question }}
+        <text class="labe-title"></text>
       </view>
-      <block wx:for='{{ list.answer }}' wx:for-item="answerName" wx:for-index="idx">
-        <view class="choose {{ answerName.selectFlag? 'choose-select':'' }}" bindtap='fnClick' data-pageNum='{{ pageNum }}' data-id='{{ idx }}'>
-          <text>{{ answerName.content }}</text>
+      <block wx:for='{{ listArr.answer }}' wx:for-item="answerName" wx:for-index="idx">
+        <view class="choose {{ answerName.selectFlag? 'choose-select':'' }}" bindtap='fnClick' data-id='{{ answerName.id }}' data-flag='{{ answerName.selectFlag }}' data-idx='{{ idx }}'>
+          {{ answerName.answer }}
         </view>
       </block>
     </view>
-    <view class="last">{{ pageNum }} / {{ listLength }}</view>
+     <view class='last-button' bindtap='fnNext'>下一题</view>
   </view>
   <view class="recom-box"  wx:elif="{{recomedEnd}}">
     <view class='apprec-image'>

@@ -47,17 +47,20 @@
     <text>产品介绍</text>
   </view>
   <view class='product-btn'>
-    <scroll-view scroll-x class='product-btn-box'>
+    <!-- <scroll-view scroll-x class='product-btn-box'> -->
+    <view class='product-btn-box'>
       <block wx:for='{{ proList }}' wx:for-item="itemName" wx:key='index'>
         <view class='product-btn-inside' bindtap='fnGoProList' data-type='{{ itemName.pdLnNm}}' data-id='{{ itemName.pdLnId }}'>
           <view class='product-btn-img'>
-            <image src='../../image/position_index.png' class=''></image>
+            <image src='{{ itemName.image }}' class=''></image>
           </view>
           <view class='product-btn-title'>{{ itemName.pdLnNm}}</view>
         </view>
       </block>
+    </view>
 
-      <!-- <view class='product-btn-inside' bindtap='fnGoProList' data-type='CRM'  >
+
+    <!-- <view class='product-btn-inside' bindtap='fnGoProList' data-type='CRM'  >
         <view class='product-btn-img'>
           <image src='../../image/position_index.png' class=''></image>
         </view>
@@ -88,7 +91,7 @@
         <view class='product-btn-title'>CRM</view>
       </view> -->
 
-    </scroll-view>
+    <!-- </scroll-view> -->
 
     <!-- <view class='product-btn-box'>
       <view class='product-btn-inside' bindtap='fnGoProList' data-type='CRM'>

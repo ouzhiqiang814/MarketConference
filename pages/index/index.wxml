@@ -5,7 +5,7 @@
 
 <view>
   <view class="">
-    <image src='../../image/banner.jpg' class='banner'></image>
+    <image src='../../image/intComy.png' class='banner'></image>
   </view>
   <template is='userInfoTemplate' data='{{ ...multiArrayObj }}'></template>
 </view>

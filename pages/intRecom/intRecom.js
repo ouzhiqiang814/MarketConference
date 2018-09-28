@@ -18,66 +18,8 @@ Page({
     startPart:true,
     recomed: false,
     list: null,
-    listArr:[
-      {
-        id:'3',
-        question:'您的公司是否有以下的几种烦恼？',
-        answer:[
-          {
-            content: 'A、获客渠道不足'
-          },
-          {
-            content: 'B、营销活动无法统一管理'
-          },
-          {
-            content: 'C、无法轻松的管理客户关系'
-          },
-          {
-            content: 'D、营销规则混乱'
-          }
-        ]
-      },
-      {
-        id: '4',
-        question: '您对大数据营销产品的大概预算是多少？',
-        answer: [
-            {
-            content: 'A、10万-30万'
-            },
-            {
-              content: 'B、30万-50万'
-            },
-            {
-              content: 'C、50万-70万'
-            },
-            {
-              content: 'D、80万-100万'
-            },
-            {
-              content: 'E、100万以上'
-            }
-        ]
-      },
-      {
-        id: '1',
-        question: '您对大数据营销产品的大概预算是多少？',
-        answer: [
-          {
-            content: 'A、10万-30万'
-          },
-          {
-            content: 'B、30万-50万'
-          },
-          {
-            content: 'C、50万-70万'
-          },
-          {
-            content: 'D、80万-100万'
-          }
-        ]
-      }
-    ], 
-     
+    listArr:[], 
+    slectArr:[], 
     recomedQues: true,
     recomedEnd:false,
     multiArrayObj: common.fnIndustryPosition(),
@@ -105,8 +47,7 @@ Page({
         listArr: getStorQues
       })
     }
-    this.setData({
-      list: this.data.listArr[0],
+    this.setData({      
       pageNum: 1,
       listLength: this.data.listArr.length
     })
@@ -142,66 +83,28 @@ Page({
   // 选择答案
   fnClick:function(e){
     console.log(e)
-    var pageNum = e.currentTarget.dataset.pagenum;
+    var selectFlag = e.currentTarget.dataset.flag;
     var listArrSp = this.data.listArr;
-    var questionInfo = wx.getStorageSync('questionInfo') || []
-    for (var i = 0; i < listArrSp[pageNum-1].answer.length;i++){
-      listArrSp[pageNum - 1].answer[i].selectFlag = false;
+    var idx = e.currentTarget.dataset.idx;
+    var id = e.currentTarget.dataset.id
+    var slectArrPaus = this.data.slectArr;
+    // var questionInfo = wx.getStorageSync('questionInfo') || []
+    if (!selectFlag){
+      listArrSp.answer[idx].selectFlag = true;
+      slectArrPaus.push(id)
     }
-
-    if (pageNum < this.data.listArr.length){
-      listArrSp[pageNum - 1].answer[e.currentTarget.dataset.id].selectFlag = true;
-   
-      this.setData({
-        listArr: listArrSp
-      })
-      this.setData({
-        list: this.data.listArr[pageNum-1],
-        pageNum: pageNum 
-      })
-
-      if (questionInfo[pageNum - 1]) {
-        questionInfo[pageNum - 1] = this.data.list
-      }
-      else{
-        questionInfo.push(this.data.list)
-      }
-      wx.setStorageSync('questionInfo', questionInfo)
-      
-      var that = this;
-      setTimeout(function (){
-        that.setData({
-          list: that.data.listArr[pageNum],
-          pageNum: pageNum + 1
-        })
-      },500)
+    else{
+      listArrSp.answer[idx].selectFlag = false;
+      for (let i = 0, len = slectArrPaus.length;i<len;i++){
+        if (slectArrPaus[i] == id){
+          slectArrPaus.splice(i, 1)
+        }
+      }      
     }
-    else if (pageNum = this.data.listArr.length){
-      console.log('完成答卷啦');
-      listArrSp[pageNum - 1].answer[e.currentTarget.dataset.id].selectFlag = true;
-
-      this.setData({
-        listArr: listArrSp
-      })
-      this.setData({
-        list: this.data.listArr[pageNum - 1],
-        pageNum: pageNum
-      })
-      if (questionInfo[pageNum - 1]) {
-        questionInfo[pageNum - 1] = this.data.list
-      }
-      else {
-        questionInfo.push(this.data.list)
-      }
-      wx.setStorageSync('questionInfo', questionInfo);
-      var that = this;
-      setTimeout(function () {
-        that.setData({
-          recomedQues: false,
-          recomedEnd: true,
-        })
-      }, 500)
-    }
+    this.setData({
+      listArr: listArrSp,
+      slectArr: slectArrPaus
+    })
 
 
   },
@@ -224,6 +127,9 @@ Page({
         startPart:false,
         recomed: true
       })
+      // 获取题目
+    var dataArr = '';
+    common.fnCommonRequest('/am/marketconference/wxapi/cfProductMgr/findCFRecomAnswerInfoList', dataArr, function (res) { that.fnInitData(res) })  
   },
   fnRestart:function(){
     this.setData({
@@ -270,6 +176,46 @@ Page({
   bindMultiPickerColumnChange: function (e) {
     var that = this;
     common.bindMultiPickerColumnChange(e, that)
+  },
+  // 加载题目
+  fnInitData:function(res){
+    wx.hideLoading();
+    console.log(res);
+    var listArrPaus = {
+      question : '',
+      answer : [],
+    };
+    if (res.data.status == '200') {
+      listArrPaus.question = res.data.data[0].rmQuestion
+      for(let i=0, len=res.data.data.length; i<len; i++) {
+        listArrPaus.answer.push({
+          answer: res.data.data[i].rmAnswer,
+          id: res.data.data[i].rmId,
+          selectFlag:false
+        })
+      }
+      this.setData({
+        listArr: listArrPaus,
+      })
+      
+    }
+  },
+  // 下一题
+  fnNext:function(){
+    var pageNumPaus = this.data.pageNum;
+    pageNumPaus++;
+    var that =this;
+    that.setData({
+      pageNum: pageNumPaus
+    })
+    // 获取题目
+    var dataArr = {
+      "rmIds":[['80015'], ['80009']]
+    };
+    common.fnCommonRequest('/am/marketconference/wxapi/cfProductMgr/findCFProdByRecomInfoList', dataArr, function (res) { that.aaa(res) }) 
+  },
+  aaa:function(res){
+    console.log(res)
   }
   
 })

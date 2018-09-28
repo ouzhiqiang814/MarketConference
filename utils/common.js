@@ -207,10 +207,10 @@ function bindMultiPickerColumnChange(e,that){
     case 0:
       switch (data.multiIndex[0]) {
         case 0:
-          data.multiArray[1] = ['可持续金融部', '投资银行部', '现金管理部', '营销管理部', '机构业务部', '贸易金融部', '企金业务管理部', '风险管理部', '金融市场部'];
+          data.multiArray[1] = ['-请选择-','可持续金融部', '投资银行部', '现金管理部', '营销管理部', '机构业务部', '贸易金融部', '企金业务管理部', '风险管理部', '金融市场部'];
           break;
         case 1:
-          data.multiArray[1] = ['电销部', '信贷部', '服务营业部客户','销售营业部产品'];
+          data.multiArray[1] = ['-请选择-','电销部', '信贷部', '服务营业部客户','销售营业部产品'];
           break;
         case 2:
           data.multiArray[1] = ['其他'];
@@ -227,7 +227,7 @@ function bindMultiPickerColumnChange(e,that){
 // 行业职位
 function fnIndustryPosition(){
   var data = {
-    multiArray: [['银行', '公司', '其他'], ['可持续金融部', '投资银行部', '现金管理部', '营销管理部', '机构业务部', '贸易金融部','企金业务管理部','风险管理部','金融市场部']],
+    multiArray: [['银行', '公司', '其他'], ['-请选择-','可持续金融部', '投资银行部', '现金管理部', '营销管理部', '机构业务部', '贸易金融部','企金业务管理部','风险管理部','金融市场部']],
       multiIndex: [0, 0],
       multiValue: '',
     }

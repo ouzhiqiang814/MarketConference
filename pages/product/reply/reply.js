@@ -19,17 +19,24 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (option) {
+  onLoad: function(option) {
     var that = this;
     common.fnTopBar(that, '问题回复', '../../../image/back.png', 'fnGoBack');
+    var arrList = wx.getStorageSync('arrList');
     this.setData({
-
-      id: option.id
+      id: option.id,
+      replay: arrList[option.id].pdQuestion,
+      arr: arrList[option.id].pdAnswers
     })
+
+
+
+
+
 
   },
   // 返回函数
-  fnGoBack: function () {
+  fnGoBack: function() {
     wx.navigateBack({
       url: '../detil/detil'
     })

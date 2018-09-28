@@ -18,7 +18,7 @@
 .meetingReport-box {
   background-color: #fff;
   box-shadow: 0px 0px 2px 3px #e9e9ea;
-  width: 100%;
+  /* width: 100%; */
   border-radius: 5px;
   padding: 20px 10px 20px 10px;
 }
@@ -73,7 +73,7 @@
 
 .meetingReport-fnbox {
   position: relative;
-  width: 140rpx;
+  width: 130rpx;
   height: 57px;
 }
 

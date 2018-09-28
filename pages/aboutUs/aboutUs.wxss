@@ -58,7 +58,7 @@ page{
   font-size: 16px;
 }
 .btn-box{
-  width: 600rpx;
+  width: 650rpx;
   margin: 0 auto;
   display:flex;
   flex-direction:row;
@@ -116,7 +116,7 @@ page{
 .product-btn-inside{
   width: 160rpx;
   display:inline-block;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 .product-btn-img{
   width: 100%;

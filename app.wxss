@@ -57,10 +57,10 @@
 }
 
 .nav-image_iPhone {
-  width: 58rpx;
-  height: 58rpx;
+  width: 50rpx;
+  height: 50rpx;
   position: fixed;
-  top: 25px;
+  top: 27px;
   left: 20px;
 }
 

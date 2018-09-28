@@ -18,10 +18,10 @@
   margin: 0 auto;
   color: #4d4d4d;
   font-size: 14px;
-  word-break: keep-all;
+  text-indent: 2em;
   word-wrap: break-word;
-  white-space: pre-wrap;
+  white-space: normal;
   text-align: justify;
   text-justify: inter-ideograph;
-  padding-top: 0px;
+  margin-bottom: 10px;
 }
