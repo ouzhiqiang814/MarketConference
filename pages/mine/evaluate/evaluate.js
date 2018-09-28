@@ -108,6 +108,7 @@ Page({
   // 加载评价列表
   fnInitData: function (res) {
     wx.hideLoading()
+    var that = this;
     var itemsArr = [];
     if (res.data.status == '200') {
       console.log(res)
@@ -117,14 +118,16 @@ Page({
           phoneNum: res.data.data[i].cstId.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2'),
           time: res.data.data[i].crtTm,
           content: res.data.data[i].assCntnt,
-          reply: '天阳回复：感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢感谢',
+          reply: '天阳回复：感谢您对我们产品的认可，您的支持将是我们最大的追求，祝您生活愉快！',
           terFlag: res.data.data[i].cstId == wx.getStorageSync('cstId') ? true : false,
           addTerFlag: false,
           index: i,
           pkId: res.data.data[i].pkId,
           pdSmy: res.data.data[i].pdSmy,
           pdNm: res.data.data[i].pdNm,
-          pdId: res.data.data[i].pdId
+          pdId: res.data.data[i].pdId,
+          pdIcn: that.fnIfPic(res.data.data[i].pdIcn),
+          
         })
       }
       console.log(itemsArr)
@@ -141,7 +144,15 @@ Page({
       })
     }
   },
-
+  // 图片判断
+  fnIfPic: function (pic) {
+    var ipStr = app.globalData.ip + '/am/'
+    var kong = ''
+    if (pic) {
+      return ipStr + pic;
+    }
+    return kong
+  },
   // 刷新评论
   fnSubmitEval: function (res) {
     wx.hideLoading()

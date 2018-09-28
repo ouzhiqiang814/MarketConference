@@ -135,7 +135,7 @@
   <view class='panel-del' data-id='{{pdId}}' data-name='{{ pdNm }}'>
     <view class='panel-box-del'>
       <view class='panel-image'>
-        <image src='{{ src }}'></image>
+        <image src='{{ picIcon }}'></image>
       </view>
       <view class='panel-text'>
         <view class='panel-title'>{{ pdNm }}</view>
@@ -218,7 +218,7 @@
       </view>
       <view class='eval-panel-box'>
         <view class='eval-panel-image'>
-          <image src='{{ src_pro }}'></image>
+          <image src='{{ pdIcn }}'></image>
         </view>
         <view class='eval-panel-text'>
           <view class='eval-panel-title'>{{ pdNm }}</view>

@@ -116,7 +116,7 @@ page{
 .product-btn-inside{
   width: 160rpx;
   display:inline-block;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 .product-btn-img{
   width: 100%;

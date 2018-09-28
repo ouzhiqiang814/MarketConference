@@ -14,9 +14,9 @@
       <view class='meetingReport-mid-left'>
         <view class='meetingReport-mid-top-text'>
           <view class='meetingReport-mid-top-text_1'> 16</view>
-          <view class='meetingReport-mid-top-text_2'> %</view>
+          <view class='meetingReport-mid-top-text_2'> 人</view>
         </view>
-        <view class='meetingReport-mid-bot-text'> 商机触达率</view>
+        <view class='meetingReport-mid-bot-text'> 活跃用户数</view>
       </view>
       <view class='meetingReport-mid-mid'></view>
       <view class='meetingReport-mid-left'>
@@ -24,7 +24,7 @@
           <view class='meetingReport-mid-top-text_1'> 12</view>
           <view class='meetingReport-mid-top-text_2'> %</view>
         </view>
-        <view class='meetingReport-mid-bot-text'>商机转化率</view>
+        <view class='meetingReport-mid-bot-text'>用户活跃度</view>
       </view>
     </view>
     <view class='meetingReport-bottom'>
@@ -34,7 +34,7 @@
           <view class='meetingReport-fnbox-top_1'>90</view>
           <view class='meetingReport-fnbox-top_2'>人</view>
         </view>
-        <view class='meetingReport-fnbox-bot'>互动用户数</view>
+        <view class='meetingReport-fnbox-bot'>潜在用户数</view>
       </view>
       <view class='meetingReport-fnbox'>
         <image src='../../image/Databox.png'></image>
@@ -42,7 +42,7 @@
           <view class='meetingReport-fnbox-top_1'>90</view>
           <view class='meetingReport-fnbox-top_2'>人</view>
         </view>
-        <view class='meetingReport-fnbox-bot'>潜在用户数</view>
+        <view class='meetingReport-fnbox-bot'>互动用户数</view>
       </view>
       <view class='meetingReport-fnbox'>
         <image src='../../image/Databox.png'></image>

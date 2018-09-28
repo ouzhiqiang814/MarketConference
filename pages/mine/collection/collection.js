@@ -36,21 +36,24 @@ Page({
   },
   // 加载数据
   fnInitData:function(res){
-    var itemsArr = [];
+    var resArr = []
+    var that = this;
     wx.hideLoading()
     if (res.data.status == '200') {
-      console.log(res)
-      for (let i = 0, len = res.data.data.length; i < len; i++) {
-        itemsArr.push({
-          pdId: res.data.data[i].pdId,
-          pdNm: res.data.data[i].pdNm,
-          pdSmy: res.data.data[i].pdSmy,
-          pkId: res.data.data[i].pkId
+        console.log(res)
+        for (let i = 0, len = res.data.data.length; i < len; i++) {
+          resArr.push({
+            pdId: res.data.data[i].pdId,
+            pdNm: res.data.data[i].pdNm,
+            pdSmy: res.data.data[i].pdSmy,
+            picIcon: that.fnIfPic(res.data.data[i].pdIcn),
+          })
+        }
+        console.log(resArr)
+
+        this.setData({
+          items: resArr
         })
-      }
-      this.setData({
-        items: itemsArr
-      })
 
     }
     else {
@@ -61,6 +64,15 @@ Page({
         confirmColor: '#587BFD'
       })
     }
+  },
+  // 图片判断
+  fnIfPic: function (pic) {
+    var ipStr = app.globalData.ip + '/am/'
+    var kong = ''
+    if (pic) {
+      return ipStr + pic;
+    }
+    return kong
   },
   // 返回函数
   fnGoBack: function () {

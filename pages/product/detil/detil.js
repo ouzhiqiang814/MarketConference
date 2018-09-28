@@ -90,34 +90,46 @@ Page({
     wx.hideLoading()
     if (res.data.status == '200') {
       console.log(res)
-      this.setData({
-        pdSmy: res.data.data.pdSmy,
-        pdDsc: res.data.data.pdDsc,
-        num: res.data.data.brwsCnt,
-        clctCnt: res.data.data.clctCnt,
-      })
+      var titleArr = []; 
+      var pdDscArr = [];
+      var picArr = [];
 
-      
+      titleArr = res.data.data.pdDsc.split('/t');
+      pdDscArr = titleArr[0].split('/n');
       if (res.data.data.cfPdPicInfVOS != ''){
-        console.log(res.data.data.cfPdPicInfVOS)
-        var picDel = [];
-        for (let i = 0, len = res.data.data.cfPdPicInfVOS.length;i<len;i++){
-          if (res.data.data.cfPdPicInfVOS[i].picTp == 'icon') {
-            this.setData({
-              picIcon: app.globalData.ip + '/am/' + res.data.data.cfPdPicInfVOS[i].picAdr
-            })
-          }
-          else{
-            picDel.push({
-              cfPdPicInfVOS: app.globalData.ip + '/am/' + res.data.data.cfPdPicInfVOS[i].picAdr
-            })
+        for (let i = 0, len = res.data.data.cfPdPicInfVOS.length; i < len; i++){
+          if (res.data.data.cfPdPicInfVOS[i].picTp == 'detail'){
+            picArr.push(app.globalData.ip + '/am/' + res.data.data.cfPdPicInfVOS[i].picAdr)
           }
         }
-        this.setData({
-          picDel: picDel,
-          picDelFlag:true
+      }
+
+      var detilArr = [];
+      for (let i = 0, len = pdDscArr.length;i<len;i++){
+        detilArr.push({
+          title: titleArr[i+1],
+          img:'',
+          ifImg:false,
+          dsc: pdDscArr[i]
         })
-      }   
+      }
+      console.log(picArr)
+      for (let i = 0, len = picArr.length;i<len;i++){
+        detilArr[i].img = picArr[i];
+        detilArr[i].ifImg = true;
+      }
+      console.log(detilArr)
+      var clctCntString = 0;
+      if (res.data.data.clctCnt){
+        clctCntString = res.data.data.clctCnt
+      }
+      this.setData({
+        lists: detilArr,
+        num: res.data.data.brwsCnt,
+        clctCnt: clctCntString,
+        picArr: picArr
+      })
+        
       if (res.data.data.wthrClct == 1) {
         this.setData({
           collectionImage: '../../../image/love-1-se.png',
@@ -139,7 +151,7 @@ Page({
   // 查看案例
   fnGoCase:function(){
     wx.navigateTo({
-      url: '../case/case?type_kind=' + this.data.type_kind,
+      url: '../case/case?id=' + this.data.pdId,
     })
   },
   // 咨询
@@ -164,9 +176,9 @@ Page({
   fnCompanyEvent: common.fnCompanyEvent,
   // fnPositionEvent: common.fnPositionEvent,
   userInfoHandler: function (e) {
+    var url = app.globalData.ip + '/am/marketconference/wxapi/cfCstMgr/createCFCstBscInf';
     var that = this;
-    var url = e.currentTarget.dataset.url
-    common.userInfoHandler(e, that, true, url,true)
+    common.userInfoHandler(e, that, true, url)
   },
   //跳过填写信息
   fnCancelBtn: function () {
@@ -186,6 +198,15 @@ Page({
   bindMultiPickerColumnChange: function (e) {
     var that = this;
     common.bindMultiPickerColumnChange(e, that)
+  },
+  // 查看大图
+  previewImage:function(e){
+    console.log(e)
+    var current = e.target.dataset.info;
+    wx.previewImage({
+      current: current,
+      urls: this.data.picArr
+    })
   }
 
 })
