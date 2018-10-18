@@ -105,6 +105,7 @@ Page({
       }
 
       var detilArr = [];
+<<<<<<< HEAD
       for (let i = 0, len = pdDscArr.length; i<len; i++){
         detilArr.push({
           title: titleArr[i+1],
@@ -129,6 +130,20 @@ Page({
           detilArr[i].img = picArr[i];
           detilArr[i].ifImg = true;
         }
+=======
+      for (let i = 0, len = pdDscArr.length;i<len;i++){
+        detilArr.push({
+          title: titleArr[i+1],
+          img:'',
+          ifImg:false,
+          dsc: pdDscArr[i]
+        })
+      }
+      console.log(picArr)
+      for (let i = 0, len = picArr.length;i<len;i++){
+        detilArr[i].img = picArr[i];
+        detilArr[i].ifImg = true;
+>>>>>>> e6d6730612767d347289d3e97ad4fcb0811ad515
       }
       console.log(detilArr)
       var clctCntString = 0;

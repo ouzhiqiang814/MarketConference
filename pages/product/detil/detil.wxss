@@ -47,7 +47,11 @@ page {
   line-height: 1.8;
   color: #797979;
   text-align: justify;
+<<<<<<< HEAD
   text-justify: distribute;
+=======
+  text-justify: inter-ideograph;
+>>>>>>> e6d6730612767d347289d3e97ad4fcb0811ad515
 }
 
 .detie-image {
